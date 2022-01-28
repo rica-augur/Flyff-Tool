@@ -6,9 +6,12 @@ retry_over_sec  = 30                                                  		// ☆�
 launcher_loadwait_sec  = 1                                                  // ☆ランチャーのロード時間まち(秒)（初期化待ち）
 pwcopy_dialog_x = 800														// ☆PWコピーOKのダイアログ表示位置X
 pwcopy_dialog_y = 450                                                  		// ☆PWコピーOKのダイアログ表示位置Y
-launcher_path   = "G:\LINE POD Launcher\pod-client.exe"	// ランチャー起動パス
-//launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
+
+// ランチャー起動パス
+launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
+//launcher_path   = "G:\LINE POD Launcher\pod-client.exe"	
 //launcher_path   = "D:\Program Files (x86)\LINE POD Launcher\pod-client.exe"
+
 launcher_kill = 0	// 1:ランチャーを再起動する
 Auto_login = 1		// 1:IDPWを自動入力する
 Resident = 0		// 1:常駐する(マクロ終了後、アカウント選択に戻る)
