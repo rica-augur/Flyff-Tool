@@ -1,0 +1,192 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// 設定
+//////////////////////////////////////////////////////////////////////////////////////////////
+delay           = 10                                                  		// ☆各操作のディレイ時間(ミリ秒)(数値が小さいほど早い)
+retry_over_sec  = 30                                                  		// ☆ランチャー起動待ち時間(秒)
+launcher_loadwait_sec  = 1                                                  // ☆ランチャーのロード時間まち(秒)（初期化待ち）
+pwcopy_dialog_x = 800														// ☆PWコピーOKのダイアログ表示位置X
+pwcopy_dialog_y = 450                                                  		// ☆PWコピーOKのダイアログ表示位置Y
+launcher_path   = "C:\Program Files (x86)\LINE POD Launcher\pod-client.exe"	// ランチャー起動パス
+//launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
+//launcher_path   = "D:\Program Files (x86)\LINE POD Launcher\pod-client.exe"
+launcher_kill = 0	// 1:ランチャーを再起動する
+Auto_login = 1		// 1:IDPWを自動入力する
+Resident = 0		// 1:常駐する(マクロ終了後、アカウント選択に戻る)
+popup = 1			// 1:ポップアップで選択する
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+//               ﾁﾞ､    ﾟﾞﾞｰｰｰ｡､   ､､ｪｧﾍｰﾞﾞﾞﾞﾞﾞﾞｰﾍﾍｪ｡､､  ｡ｰｰﾞﾟ        ｨﾞ ｻ                  //
+//               ﾄ  ｷ          ､ﾙｻﾞ                    ﾟ             ｨﾞ  ｻ                  //
+//               ﾄ   ﾗ､     ｨﾍﾟ                                    ､ﾙ｡､  ｻ                  //
+//               ﾄ ｮﾛ､ ﾞｰ｣｢ﾟ                                    ､ｰﾞ  ﾎﾞﾟ ｻ                  //
+//               ｻ   ﾞ ｣ﾞ          ｡ﾞ                            ﾙ､  ｢   ｻ                  //
+//               ｻ  ･､ｱ            ｱ                               ｮ ｨ   ﾞ                  //
+//               ﾈ  ｡ﾄ            ･ﾞ              ｡                 ﾟﾞ  ･ﾞ                  //
+//                ､ ﾞ             ｢                ､                    ﾁ                   //
+//                ｶｻ              ﾖ                ﾖ｡                 ｡ ﾞ                   //
+//                ﾈ    ｢          ﾎ                 ﾞﾌ､              ｡ ｻ｢ｪ                  //
+//                ﾎ    ｢   ﾁ､    ﾎｩ､               ﾞﾛ ﾟｦ､ﾞ･･ ｡       ﾈ ﾈ  ﾖ､                //
+//                ｻ    ｢  ﾍｰｷ   ｨ  ｶ                ﾞ    ｪ   ｢       ｺ ｢    ﾙ               //
+//               ｺｻ    ｢  ｨ  ､  ｱ   ｾ              ｧ      ｢､  ﾞ        ｢     ﾖ､             //
+//              ｡ﾛｻ     ｧ ｻ  ﾖ､ ﾎ｣､ ﾞｷ            ｣ﾎﾎﾎ  ﾎﾎ､､｡ ﾞ      ｡ ｢    ﾖ  ｪ            //
+//             ﾙｻ ｻ     ﾖ ﾎﾎﾎﾎﾎﾖﾎﾎﾎﾎﾎ､ﾟ､ｪ｡     ､ ﾎﾎ ﾎﾎﾎﾎﾎﾎﾎﾎﾎﾎﾞ      ﾁ ｧ     ｶ､ ｷ           //
+//            ﾎｻ  ﾖ     ･ﾎﾖﾎﾎｼﾎﾎﾎﾎ ﾎﾎﾆ  ﾞ  ﾞｰ   ﾞ ｢ﾎﾎ   ﾎﾎﾎﾖﾎﾎ      ｣  ﾞ      ﾎ､ ﾎ          //
+//          ｣ﾛﾈ    ﾂ､    ﾖｱ  ･ﾎ ﾛ ﾟ ﾎﾎ            ﾎﾎ      ﾎ ﾈｻ     ｧ  ｱ       ﾖﾛ､ ﾙ         //
+//         ﾙﾞｺﾞ    ｺ ､    ｢ ﾟ ﾎｻﾙ､､ﾎｶｻ            ﾈｻﾎｪ､ｫﾎﾎﾎ ﾁ    ｡ﾞ  ﾒ         ｻﾈ  ｻ        //
+//        ﾎ ｺｻ      ｮ ﾛ｡    ｡  ﾎ､ﾞﾟ､ﾁ              ｼｪ､ ､ｰﾞ ｧ､､ｨｱﾞ   ﾍ          ｺ ﾞ ｻ        //
+//       ﾎ   ﾞ       ｪﾈ  ﾌﾙｰｰﾈｰ         ﾖﾛｻﾌﾞﾞﾌ､            ﾛﾞ    ﾉ             ｻ･ ｻ        //
+//      ﾎ  ﾎﾎ         ﾟｻ｡  ｪ            ﾖ､     ﾞ           ﾄ   ｡ｰ               ･､ﾎ         //
+//      ｻ  ﾄﾎ            ﾟｰ､ｻ､ﾞｰｪ｡｡､､     ﾟﾞﾞﾟ    ､､｡ｪｧﾅﾞｫﾑ･ｰﾞ          ｡       ﾎｻ          //
+//      ｻ  ｾｻ                   ｡ ﾟ ｣ﾙﾙﾎｻﾎﾞﾞﾞﾖﾎｻｻﾙﾙ｣ﾟ  ･･ﾟ              ｻ      ｺﾞ           //
+//      ｢､  ﾎ､                 ﾎﾙｰﾞﾞｬ｡   ｢ｧｰｨﾞ    ｨﾛﾟﾞｰﾍ､､ ﾟ            ﾞ     ｺﾍ            //
+//        ｻ､          ､    ｡ｰﾞ       ﾟ｢ｩ｡ ｻ｣ﾞ､｡ｧﾌ          ﾙﾑ          ｢     ﾙﾞ             //
+//          ﾟﾍﾎﾙﾎｪ､   ﾞ  ､ｰﾌﾑ ｻ    ｣     ｱｻｻﾎ､      ｡     ﾍ ｧｻﾍ､｡ ､､   ｻ ﾙｻｻｻﾙ､             //
+//           ﾈﾍｰｮｪﾑﾎﾙｪﾑﾑﾙﾞ｡ ､､ﾖ｡ﾙｻｻｻ  ﾎﾎﾞ ﾖﾈ  ､｢ﾎﾎ   ﾄﾞﾍｪ｣ ｵ   ﾑﾎｻｰ｢｢ﾎﾛﾒｦﾎﾊﾞ｢｣ﾎ             //
+//           ｢ﾎ｣｣ｺﾈﾎ｣｣ﾎﾎﾍｻｯｳﾎ｣ﾑﾙﾙﾔｶﾞ   ﾙｰｰﾞ ｰ｡ﾄ      ｢ﾍ､    ﾞ ｰﾞﾎﾆ､ﾞ｡ﾖﾎﾎﾙﾎﾑ｣ﾑﾎﾞ             //
+//           ､ﾙ｢ﾞﾟ  ﾞ｢ﾎ､ｨﾞ｣ｺｻ    ､ｻ   ﾎﾎ        ﾎﾎ｡     ﾞｪ       ﾞｻｻﾎｸ      ﾞｱｪ､            //
+//          ﾎﾟ         ﾟｶﾛﾞﾟ   ｡ﾞ     ﾟﾞ                   ﾍ､       ﾎﾟ         ｢ｬ           //
+//         ﾖﾞ            ｶ   ､ﾍ                       ､､ｰｰｰｰｰﾙ､    ｻ             ﾎ          //
+//          ﾎ             ｻ ｧﾞ､｡｡､､           ･､  ､ｰﾞ ｨﾍｰｸ｣ﾙｻﾙｬﾞ ｣ﾍ              ｻ          //
+//           ｶ､           ﾖﾎ､｣ﾎ｣｣ｧﾂﾍﾑﾑｺｰｪ､､   ､ﾕｧﾜｧｰﾎﾙｬﾂﾛﾍﾞﾞ     ｻ              ﾎ           //
+//            ｢ﾛ      ﾎ   ｻ    ﾞﾞﾞﾞﾌｻ  ﾟﾞﾞﾛﾙｰｰﾍｻｱ  ･ﾞ ｷ          ﾎ   ﾎ       ﾙﾎﾎﾎｻ          //
+//            ﾙﾞ   ､ﾙｳﾎ､｣ｻ           ｧｰｰ ﾞｹ      ﾟｪ ｡ｪ｣ﾞ          ﾌﾎ､ﾛﾙ､    ﾎ               //
+//         ﾟｻﾎﾙｰｰﾞﾞ  ﾟﾟ              ﾖ    ｻ         ｻｻﾞ              ﾟ  ｻｪ､ ｢ﾙ､｡            //
+//////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                          //
+//  ------------------------------------梨花ちゃま作成------------------------------------  //
+//                                                                                          //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// ESCキーで強制終了
+sethotkey(VK_ESC, 0, "ForceStop")
+
+// OSを判別
+//os=KINDOFOS(FALSE)
+
+
+// ■■ CSVファイル読み込み ■■
+FILE = FOPEN("linepod.csv",F_READ or F_WRITE)　//ファイルを開く
+number=FGET(FILE,F_LINECOUNT)
+DIM name[number]
+DIM id[number]
+DIM pw[number]
+DIM all=""
+FOR i = 2 TO number
+	a =SPLIT(FGET(FILE,i),",")
+	name[i-1]=a[0]
+	id[i-1]=a[1]
+	pw[i-1]=a[2]
+	all = all + (i-1) + ":" + name[i-1] + "<#CR>"
+NEXT
+FCLOSE(FILE)
+
+WHILE TRUE
+	// ■■ 入力待ち ■■
+	n = 0
+	WHILE n <= 0 OR number <= n
+		IF popup = 1
+			n = POPUPMENU(all, 0) + 1
+		ELSE
+			n = INPUT(all, 1,false,G_SCREEN_W/2,G_SCREEN_H/3*2)
+		ENDIF
+		
+		IFB VARTYPE(n) = VAR_EMPTY
+			fukidasi("マクロ終了中です。。")
+			DOSCMD("taskkill /im UWSC.exe /f")
+			exitexit
+		ENDIF
+		IF n <= 0 OR number <= n
+			fukidasi("入力値が不正です")
+		ENDIF
+	WEND
+
+	// ランチャー再起動
+	IF launcher_kill=1
+		fukidasi("ランチャー終了中です。。")
+		EXEC("C:\Windows\System32\schtasks.exe /end /tn LINE-POD") 
+		DOSCMD("taskkill /im pod-client.exe /f")
+		SLEEP(1)
+		fukidasi("ランチャーを起動中です。。")
+		EXEC(launcher_path) 
+	ENDIF
+			
+	// 起動しているかチェック
+	wid=GETID("LINE POD")
+	// ランチャ再起動モードでなくて、ランチャーが見つからない時は起動する
+	IF wid=-1 AND launcher_kill=0
+		fukidasi("ランチャーを起動中です。。")
+		EXEC(launcher_path) 
+	ENDIF
+	// 起動中のランチャーがある場合は、ログイン画面まで戻る
+	IF wid>=0
+		fukidasi("ログイン画面まで戻ります")
+		ACW(wid,0,0)
+		FOR i = 0 TO 10
+			BTN(LEFT,CLICK, 25, 60)
+			SLEEP(0.2)
+		NEXT
+	ENDIF
+	
+	if Auto_login = 1
+		// ◆ログイン自動モード
+		// ランチャー起動まち
+		slice = 1
+		start = GETTIME()
+		WHILE wid=-1
+			fukidasi("ランチャー起動まち")
+			IF retry_over_sec < GETTIME() - start
+				 PRINT retry_over_sec + "秒 待機しましたが"+ "<#CR>" + "ランチャーが起動しませんでした。"
+				 SLEEP(5)
+				 DOSCMD("taskkill /im UWSC.exe /f")
+				 exitexit
+			ENDIF
+			SLEEP(slice)
+			wid=GETID("LINE POD")
+		WEND
+				
+		SLEEP(launcher_loadwait_sec)
+
+		// アクティブ化
+		ACW(wid,0,0)
+		BTN(LEFT,CLICK, 200, 100)
+		
+		// WIN7はログインまで自動化
+		fukidasi("自動入力中。。")
+		BTN(LEFT,CLICK, 200, 100)
+		KBD(VK_TAB,CLICK,delay)
+		sendstr(0, id[n]) 
+		KBD(VK_CTRL,DOWN,delay) 
+		KBD(VK_V,CLICK,delay)
+		KBD(VK_CTRL,UP,delay)
+
+		// PW
+		KBD(VK_TAB,CLICK,delay)
+		sendstr(0, pw[n]) 
+		KBD(VK_CTRL,DOWN,delay) 
+		KBD(VK_V,CLICK,delay)
+		KBD(VK_CTRL,UP,delay)
+
+		// LOGIN
+		KBD(VK_TAB,CLICK,delay)
+		KBD(VK_RETURN,CLICK,delay)
+		fukidasi("ログインしました")
+	ELSE
+		// ◆ログイン手動モード
+		sendstr(0, id[n]) 
+		fukidasi("IDをクリップボードにコピーしました")
+		MSGBOX("PWをクリップボードにコピーする？",BTN_YES,pwcopy_dialog_x,pwcopy_dialog_y)
+		sendstr(0, pw[n]) 
+		fukidasi("PWをクリップボードにコピーしました")
+	endif
+		 
+	IF Resident = 0
+		exitexit
+	ENDIF
+	SLEEP(5)
+	fukidasi("")
+WEND // アカウント選択へ戻る
+
+procedure ForceStop()
+	exitexit
+fend
