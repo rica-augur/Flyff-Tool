@@ -1,0 +1,33 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// 設定
+//////////////////////////////////////////////////////////////////////////////////////////////
+[SECTION]
+// ランチャー起動パス
+launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
+//launcher_path   = "G:\LINE POD Launcher\pod-client.exe"	
+//launcher_path   = "D:\Program Files (x86)\LINE POD Launcher\pod-client.exe"
+
+// 1:ランチャーを再起動する
+launcher_kill = 0
+// 1:常駐する(マクロ終了後、アカウント選択に戻る)
+Resident = 0
+// 1:ポップアップで選択する
+popup = 1
+
+// 各操作のディレイ時間(ミリ秒)(数値が小さいほど早い)
+delay           = 50
+// ランチャー起動待ち時間(秒)
+retry_over_sec  = 30
+// ランチャーのロード時間まち(秒)（初期化待ち）
+launcher_loadwait_sec  = 1
+
+// 1:IDPWを自動入力する
+Auto_login = 1		
+
+// Auto_login = 0の時専用の設定 ////////////////////////////////////////////
+// ☆PWコピーOKのダイアログ表示位置X
+pwcopy_dialog_x = 800
+// ☆PWコピーOKのダイアログ表示位置Y
+pwcopy_dialog_y = 450
+
+

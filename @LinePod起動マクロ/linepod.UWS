@@ -1,21 +1,3 @@
-//////////////////////////////////////////////////////////////////////////////////////////////
-// 設定
-//////////////////////////////////////////////////////////////////////////////////////////////
-delay           = 50                                                  		// ☆各操作のディレイ時間(ミリ秒)(数値が小さいほど早い)
-retry_over_sec  = 30                                                  		// ☆ランチャー起動待ち時間(秒)
-launcher_loadwait_sec  = 1                                                  // ☆ランチャーのロード時間まち(秒)（初期化待ち）
-pwcopy_dialog_x = 800														// ☆PWコピーOKのダイアログ表示位置X
-pwcopy_dialog_y = 450                                                  		// ☆PWコピーOKのダイアログ表示位置Y
-
-// ランチャー起動パス
-launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
-//launcher_path   = "G:\LINE POD Launcher\pod-client.exe"	
-//launcher_path   = "D:\Program Files (x86)\LINE POD Launcher\pod-client.exe"
-
-launcher_kill = 0	// 1:ランチャーを再起動する
-Auto_login = 1		// 1:IDPWを自動入力する
-Resident = 0		// 1:常駐する(マクロ終了後、アカウント選択に戻る)
-popup = 1			// 1:ポップアップで選択する
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
@@ -77,7 +59,29 @@ popup = 1			// 1:ポップアップで選択する
 //  ------------------------------------------------------------------梨花ちゃま作成------------------------------------------------------------------  //
 //                                                                                        　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　  //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+launcher_path   = READ_INI("launcher_path")
+// 1:ランチャーを再起動する
+launcher_kill = READ_INI("launcher_kill")
+// 1:常駐する(マクロ終了後、アカウント選択に戻る)
+Resident = READ_INI("Resident")
+// 1:ポップアップで選択する
+popup = READ_INI("popup")
 
+// 各操作のディレイ時間(ミリ秒)(数値が小さいほど早い)
+delay           = READ_INI("delay")
+// ランチャー起動待ち時間(秒)
+retry_over_sec  = READ_INI("retry_over_sec")
+// ランチャーのロード時間まち(秒)（初期化待ち）
+launcher_loadwait_sec  = READ_INI("launcher_loadwait_sec")
+
+// 1:IDPWを自動入力する
+Auto_login = READ_INI("Auto_login")		
+
+// Auto_login = 0の時専用の設定 ////////////////////////////////////////////
+// ☆PWコピーOKのダイアログ表示位置X
+pwcopy_dialog_x = READ_INI("pwcopy_dialog_x")
+// ☆PWコピーOKのダイアログ表示位置Y
+pwcopy_dialog_y = READ_INI("pwcopy_dialog_y")
 
 // ESCキーで強制終了
 sethotkey(VK_ESC, 0, "ForceStop")
@@ -212,6 +216,10 @@ WHILE TRUE
 	fukidasi("")
 WEND // アカウント選択へ戻る
 
+
+FUNCTION READ_INI(key)
+	RESULT =  READINI("SECTION",key,"設定.txt")
+FEND
 procedure ForceStop()
 	exitexit
 fend
