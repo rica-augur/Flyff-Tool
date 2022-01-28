@@ -1,61 +1,79 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 // 設定
 //////////////////////////////////////////////////////////////////////////////////////////////
-delay           = 10                                                  		// ☆各操作のディレイ時間(ミリ秒)(数値が小さいほど早い)
+delay           = 50                                                  		// ☆各操作のディレイ時間(ミリ秒)(数値が小さいほど早い)
 retry_over_sec  = 30                                                  		// ☆ランチャー起動待ち時間(秒)
 launcher_loadwait_sec  = 1                                                  // ☆ランチャーのロード時間まち(秒)（初期化待ち）
 pwcopy_dialog_x = 800														// ☆PWコピーOKのダイアログ表示位置X
 pwcopy_dialog_y = 450                                                  		// ☆PWコピーOKのダイアログ表示位置Y
-launcher_path   = "C:\Program Files (x86)\LINE POD Launcher\pod-client.exe"	// ランチャー起動パス
+launcher_path   = "G:\LINE POD Launcher\pod-client.exe"	// ランチャー起動パス
 //launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
 //launcher_path   = "D:\Program Files (x86)\LINE POD Launcher\pod-client.exe"
 launcher_kill = 0	// 1:ランチャーを再起動する
 Auto_login = 1		// 1:IDPWを自動入力する
 Resident = 0		// 1:常駐する(マクロ終了後、アカウント選択に戻る)
 popup = 1			// 1:ポップアップで選択する
-//////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////
-//               ﾁﾞ､    ﾟﾞﾞｰｰｰ｡､   ､､ｪｧﾍｰﾞﾞﾞﾞﾞﾞﾞｰﾍﾍｪ｡､､  ｡ｰｰﾞﾟ        ｨﾞ ｻ                  //
-//               ﾄ  ｷ          ､ﾙｻﾞ                    ﾟ             ｨﾞ  ｻ                  //
-//               ﾄ   ﾗ､     ｨﾍﾟ                                    ､ﾙ｡､  ｻ                  //
-//               ﾄ ｮﾛ､ ﾞｰ｣｢ﾟ                                    ､ｰﾞ  ﾎﾞﾟ ｻ                  //
-//               ｻ   ﾞ ｣ﾞ          ｡ﾞ                            ﾙ､  ｢   ｻ                  //
-//               ｻ  ･､ｱ            ｱ                               ｮ ｨ   ﾞ                  //
-//               ﾈ  ｡ﾄ            ･ﾞ              ｡                 ﾟﾞ  ･ﾞ                  //
-//                ､ ﾞ             ｢                ､                    ﾁ                   //
-//                ｶｻ              ﾖ                ﾖ｡                 ｡ ﾞ                   //
-//                ﾈ    ｢          ﾎ                 ﾞﾌ､              ｡ ｻ｢ｪ                  //
-//                ﾎ    ｢   ﾁ､    ﾎｩ､               ﾞﾛ ﾟｦ､ﾞ･･ ｡       ﾈ ﾈ  ﾖ､                //
-//                ｻ    ｢  ﾍｰｷ   ｨ  ｶ                ﾞ    ｪ   ｢       ｺ ｢    ﾙ               //
-//               ｺｻ    ｢  ｨ  ､  ｱ   ｾ              ｧ      ｢､  ﾞ        ｢     ﾖ､             //
-//              ｡ﾛｻ     ｧ ｻ  ﾖ､ ﾎ｣､ ﾞｷ            ｣ﾎﾎﾎ  ﾎﾎ､､｡ ﾞ      ｡ ｢    ﾖ  ｪ            //
-//             ﾙｻ ｻ     ﾖ ﾎﾎﾎﾎﾎﾖﾎﾎﾎﾎﾎ､ﾟ､ｪ｡     ､ ﾎﾎ ﾎﾎﾎﾎﾎﾎﾎﾎﾎﾎﾞ      ﾁ ｧ     ｶ､ ｷ           //
-//            ﾎｻ  ﾖ     ･ﾎﾖﾎﾎｼﾎﾎﾎﾎ ﾎﾎﾆ  ﾞ  ﾞｰ   ﾞ ｢ﾎﾎ   ﾎﾎﾎﾖﾎﾎ      ｣  ﾞ      ﾎ､ ﾎ          //
-//          ｣ﾛﾈ    ﾂ､    ﾖｱ  ･ﾎ ﾛ ﾟ ﾎﾎ            ﾎﾎ      ﾎ ﾈｻ     ｧ  ｱ       ﾖﾛ､ ﾙ         //
-//         ﾙﾞｺﾞ    ｺ ､    ｢ ﾟ ﾎｻﾙ､､ﾎｶｻ            ﾈｻﾎｪ､ｫﾎﾎﾎ ﾁ    ｡ﾞ  ﾒ         ｻﾈ  ｻ        //
-//        ﾎ ｺｻ      ｮ ﾛ｡    ｡  ﾎ､ﾞﾟ､ﾁ              ｼｪ､ ､ｰﾞ ｧ､､ｨｱﾞ   ﾍ          ｺ ﾞ ｻ        //
-//       ﾎ   ﾞ       ｪﾈ  ﾌﾙｰｰﾈｰ         ﾖﾛｻﾌﾞﾞﾌ､            ﾛﾞ    ﾉ             ｻ･ ｻ        //
-//      ﾎ  ﾎﾎ         ﾟｻ｡  ｪ            ﾖ､     ﾞ           ﾄ   ｡ｰ               ･､ﾎ         //
-//      ｻ  ﾄﾎ            ﾟｰ､ｻ､ﾞｰｪ｡｡､､     ﾟﾞﾞﾟ    ､､｡ｪｧﾅﾞｫﾑ･ｰﾞ          ｡       ﾎｻ          //
-//      ｻ  ｾｻ                   ｡ ﾟ ｣ﾙﾙﾎｻﾎﾞﾞﾞﾖﾎｻｻﾙﾙ｣ﾟ  ･･ﾟ              ｻ      ｺﾞ           //
-//      ｢､  ﾎ､                 ﾎﾙｰﾞﾞｬ｡   ｢ｧｰｨﾞ    ｨﾛﾟﾞｰﾍ､､ ﾟ            ﾞ     ｺﾍ            //
-//        ｻ､          ､    ｡ｰﾞ       ﾟ｢ｩ｡ ｻ｣ﾞ､｡ｧﾌ          ﾙﾑ          ｢     ﾙﾞ             //
-//          ﾟﾍﾎﾙﾎｪ､   ﾞ  ､ｰﾌﾑ ｻ    ｣     ｱｻｻﾎ､      ｡     ﾍ ｧｻﾍ､｡ ､､   ｻ ﾙｻｻｻﾙ､             //
-//           ﾈﾍｰｮｪﾑﾎﾙｪﾑﾑﾙﾞ｡ ､､ﾖ｡ﾙｻｻｻ  ﾎﾎﾞ ﾖﾈ  ､｢ﾎﾎ   ﾄﾞﾍｪ｣ ｵ   ﾑﾎｻｰ｢｢ﾎﾛﾒｦﾎﾊﾞ｢｣ﾎ             //
-//           ｢ﾎ｣｣ｺﾈﾎ｣｣ﾎﾎﾍｻｯｳﾎ｣ﾑﾙﾙﾔｶﾞ   ﾙｰｰﾞ ｰ｡ﾄ      ｢ﾍ､    ﾞ ｰﾞﾎﾆ､ﾞ｡ﾖﾎﾎﾙﾎﾑ｣ﾑﾎﾞ             //
-//           ､ﾙ｢ﾞﾟ  ﾞ｢ﾎ､ｨﾞ｣ｺｻ    ､ｻ   ﾎﾎ        ﾎﾎ｡     ﾞｪ       ﾞｻｻﾎｸ      ﾞｱｪ､            //
-//          ﾎﾟ         ﾟｶﾛﾞﾟ   ｡ﾞ     ﾟﾞ                   ﾍ､       ﾎﾟ         ｢ｬ           //
-//         ﾖﾞ            ｶ   ､ﾍ                       ､､ｰｰｰｰｰﾙ､    ｻ             ﾎ          //
-//          ﾎ             ｻ ｧﾞ､｡｡､､           ･､  ､ｰﾞ ｨﾍｰｸ｣ﾙｻﾙｬﾞ ｣ﾍ              ｻ          //
-//           ｶ､           ﾖﾎ､｣ﾎ｣｣ｧﾂﾍﾑﾑｺｰｪ､､   ､ﾕｧﾜｧｰﾎﾙｬﾂﾛﾍﾞﾞ     ｻ              ﾎ           //
-//            ｢ﾛ      ﾎ   ｻ    ﾞﾞﾞﾞﾌｻ  ﾟﾞﾞﾛﾙｰｰﾍｻｱ  ･ﾞ ｷ          ﾎ   ﾎ       ﾙﾎﾎﾎｻ          //
-//            ﾙﾞ   ､ﾙｳﾎ､｣ｻ           ｧｰｰ ﾞｹ      ﾟｪ ｡ｪ｣ﾞ          ﾌﾎ､ﾛﾙ､    ﾎ               //
-//         ﾟｻﾎﾙｰｰﾞﾞ  ﾟﾟ              ﾖ    ｻ         ｻｻﾞ              ﾟ  ｻｪ､ ｢ﾙ､｡            //
-//////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                          //
-//  ------------------------------------梨花ちゃま作成------------------------------------  //
-//                                                                                          //
-//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWWkWWkkWWQWkWyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWVYTwuZZZZZyyyyyyyyyWHHkkyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyXY!(JuuZZZZZZyZZyyZyZyyyyyyyWHkyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWY!(JTuuuZZZZZXyyZyyZyyyZyyyyyyyyyWWkyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyW=._JzuzuuuuZZZXWZyZyyyyZyyZyZyyZyyyZyXHkyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWY...jzXUuuuuuZZXXHZyZZyyZyyZyyyZyyZWWyyZyyHWWyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyW^_(J-(_?7XuuuZXSKXHZZyZyyyyyyZyyyZyyyXHXZZZyWXHkyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyW^_1uzXSzuXuJvTXKZXZHZZZyZZXyZyyZyyyZZZyZWkZXXr4WHWWyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWt_xXXXKuuuuuuukXkyd0XkZZZZyZKZZyZZXXZZZZZZWHkWt(HyyWHHkyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyZyyyZyyyZyyyyyW.JyXXqXXuuuXkXWHkPdHZWZZZXXXWZyZZZZHZZyZZZVTHkb.(WyyyyHWWWyyyZyyyZyyyZyyyZyyyZyyyZyyyZyyyZyyyZyyyZyyyZyyyZyyyZyyyyyy//
+//yyyyyyZyyyyyyZyyyyyyyyyyyyyyyyyyy]-HuWWHXZZWSZZXHHW$JHHZWZZZXWXkZXXwwwwAwwwXZZZWkRXXyyyyyyWWHQyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyW\dWZkkHHZZyyyyXqKW6>HWHHHkZyXXHZZZZZXWZZZZZZuXXXWkuWWyyyyyyyWHHkyyyyyyyyyyyyyyyyyyyyyyyyyWQQQQQkyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWoHWXqkHNyVWNmWWkHd\-qkyWWVWWZVHZyZZZyHZZZZZXKuHmkuUWHWyyyyyyyyWHKWyyyyyyyyyyyyyyyyyyyWMHWWWWHHHHHHkWyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWyHWkHmWQ@?HMm1=.}.-WWVyWWW>WXyyZyZXHZZZZZZHZXkkHWkkXWHkkyyyyyyyWWHkyyyyyyyyyyyyyyyyyyyyyyyyyyyyWHHHkyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyZyyyZyyyZyyyZyyyyHHyWWqkHHM1NNM#~...._?HQmkWKCKXHyyyyXHZWZZZZmZXkkkkHWkXMHHHHHHWyyyyWHHkyyyZyyyZyyyZyyyyyyyyyyyyyyyyyWHHkyyyyZyyyZyyyy//
+//yyyyyZyyyyyyyZyyyyyyyyyyyyyyyyyyyyMyyWWHHHD<NHM@......-^`7HMN&$WfVyyyWHXyyZZXqWXWkkkkHXyXWkyyyyyyyyyyyyWWWyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWHHyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWWHkk\_dNJ'....... .mHH@MKTTkWVWHHWyyyyWqyXHHkkkbbkZXWHWyyyyyyyyyyyyWHkyyyyyyyyyyyyyyyyyyyyyyyyyyyyyHHyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWkHkkkq:~_.......... (#dM#MN>jHHHgkkHyyyXkHXHkyHkWkkbWXZZWHkyyyyyyyyyyyyWHkyyyyyyyyyyyyyyyyyyyyyyyyyyyWWkyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWQkHkkkkkkH{....(<..`....,NmJ+MMdyyWHHHHkkkWHkHWkkkyHkXHbbbkXZuXHkWyyyyyyyyyyyWHkyyyyyyyyyyyyyyyyyyyyyyyyWNWHyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyZyyyWM@@@NHHHkkkWkkkkHH@b_... ........._?<<jXyyyyHHkkkkkqkHHkkkHyyHkkWHWbpkXZuuXWHkyyyyyyyyyyWHkyyyZyyyZyyyZyyyyyyyyyWHfWyyyZyyyZyyy//
+//yyyyyyZyyyyyyZyyyyyyyW@@HHMHyyyWWHHHHH@H@HHx...-J(--......~_JyyyyyX1HkfWkkkHqkkqkkHyyWkkyXHWWpWkuuuuzzUWWkyyyyyyyHHWyyyyyyyyyyyyyyyyyWWHfWHyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyW@H@HMyyyyyyyWH@@@H@H@H@L...6>+1X-....(XWWyyyWauqkkqkqkkkkqkkkkkyyyHkZZZZWHWWkkuuuzzzzzXWWWkWyWKkyyyyyyyyyyyyWkWHfWTdWyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyWM@HMyyyyyyWH@@HM@@H@H@@H@a_.<<+?_..._XXWyyyyH@HHkkkqkkqkkkqkqkkWyyyXHXZZZZZZUWWkXuuzuUUWQmXz}_?W9UWHHHHHHHWXUY"1(dWyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyMHMWyyyyyH@H@HM@HH@H@@H@@H@a_...._-(jW4WyyZWT9MNkqkqkKkqkkkqkkkkkyyyyWWyZZZZZZZuuXUXuuuuuu274kJ,W;......_-(-JdWyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyZyyyyHWMyyyyyWH@@MHMH@@H@H@H@H@H@HHHH@@2?jWJWyyyy::JHHkkkHkkkqkkkkqkkkkyyyZyWXyZZZZZZZZuuuuuV7~-((JJWWXR&J-.vTWWyyyyyyyyyyyyyyyyZyyyyy//
+//yyyyyZyyyyyyyZyyyyyyyWNWHWyyyW@H@#yW@H@@H@H@@@H@@@@HMB~:(<7hWyyyW<<:UMqkkqNHkkqkqkHqkkkkkyyyyyyyyZZZZZZV77iJwZZXXZZZZZHkkyyHWkfkWWWyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyWHpWHWkWH@H#yWH@H@H@@HH@@H@MY=_ <~  `(UWyyy[`_~T@HkkkHMHHkkkqkWHHkkkkWyXUUUXw&++yZZZZZZZZyyWWkyZHHyWHkyyHWpfWNkyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyWHfffVfWHHHHHMMH@@MH@@H#"!` __  `` ._`?Wkyh````.UNHkkkHkHHHHkkqHkWWWHHWWyyyyyyyyZyyyyyyZyZyyyHHHyyVVVHWWyWHWfWHWyyyyyyZyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyWHVVyVVWQHMHHM@H@HMM@< ``.!``` .~ ( ` .?UHn.````?M@HHkkHHWkWHHHHHqkkWkkkkWWWWWWWWWyyyyyyWWWWyyWHHWffpfWHWyWHffWkyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyWkWHHyyWMH@MmkMH@M=<!`.!```.~ ``(;`.< `` ?TWWWAedMMMMMHHHHqqqmmmHHqHHHHHyVWHM@@@@@@@@@HHQkWyVVfWkHHWpfpWNWyHkfWkyyyyyyyyyZyyy//
+//yyyyyyZyyyyyyZyyyZyyyyyyyyHWHyyWHHyWHMMMH#'.: _```.``````(`,< ````````_74WqkqHHkVU3(7WyyyyyyyyyyyyyyyyyWMH@@@@@@@@@@@MHkppHkWHHHWfWHyWkfHyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyWHWyyWWHyyyyyyyf~~_.``` ````````(.<``````````````W@HHHHHVyWkVdkyyyyyyyyyyWkkWyyyyHM@@@@@@@@@@@@@HkWHyWHHkHWHkWHWHyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyQqHyyWWWWyyyyyWf_:(. ``._`````````( ```` ._.``````d@@@@@HVyVW@HKMHmQkWyyWMMMMH@kWyyyWM@@@@@H@@@@@@@MHHyyyHHkkWkHHHyyyyZyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyWyyyyyHyHyyyyyW=~~(<~_:~>:~:~:~_-., ``..~ ```_ ``._J@M@@@MVVVfH@@H@@@@@@MMHHmQmkM@kkVyyW@@@@@@@H@@@@@@HNyyyyMHkkkHyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyWHyNyyyyP__<(_1~~_(+(--~~~~:( ``.~`````````.:~J@@@MMfffffW@@@@@@@@@@@@@@@@@@@@@@@@MHM@@@@@@@@H@@@@HNyyyyWHkkNyyyyyyyyyyyyy//
+//yyyyyZyyyyyyyZyyyZyyyyyyyyyyyNyHyyyW{~~~~(dfWHHHHWVffpWm>``_``````````.:?jJ@HHpfpWHpWH@@@@gggg@@g@@g@@@@@@@@HH@@@H@@@@@@@@@@@@@HkyWkHHHkHHyyyyyyyyZyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyWHWHyyX_~~~~(dyyyyyyVfffppP` _``````````.:__:(HHHHH@HWWMHkWWHHHHMHHHHHHHHHWWMMyyyyyWHM@@@@@@@@@@@@@HHHHWyyHbHWyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWHHHK~~~~~cyZZyyyyVffWWK`  `````````` :::_<(@M@@M@@gg@gggMHkkyWHHyyyyyyWW@HNyyyyyyyWM@@@@@@@@@@@@H#yyyyyWHHHyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyZyyyyyyyyyyyyWt~~~~~zZZyyyyWWkWWH'  `````````` (::::~_WHHHHgggggggggggg@@gkQQQkH@g@HHyyyyyyyyyW@M@@@@@@@@M@@NyyyyyyNbHyyyyZyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyW~~~~~JTWMMWNWVVffp%  ````.````` ~<~~```.@ggNkWH@gg@ggggggggggggg@HHMWyyyyyyyyyyyW@Mg@@g@@@@MM@MyyyyyyHWHyyyyyyyyyyy//
+//yyyyyyZyyyyyyZyyyZyyyyyyyyyyyyyyyyP~~(dkWZXXWyWMm,~:_(Jdk+.```.`````` .-_~JMHgggNkVWMHgggggggHNMMHHWMyyyyyyyyyyyyyyWgHMgg@g@g@HM@#yyyyyWNHyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyZyyyyyyyW{(dWHHWHWHgHkkHMNQpfpppppW,````..(;:<!`.WyWHHgggggHkkHM@HgMHgHHMHyyyyyyyyyyyyyyyyHHHWggggggg#H@HyyyyWWHyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyWdZZZUQHH@HWWyVWfWMHHWpfppppp&.(;::+<``.HyyyyyWHHHHHHHHyyWHmNyyyyyyyyyyWNyyyyyyyyWHNyWggggg@HHHMyyyWWHHyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyZyyyyyyyyW9TC&J&d@@HMgkVyVVXnXfWH><?T7TUfWhJ?~```` HyyyyyyyyyyyyyyyyyWHNyyyyyyyyyyyHHkyyyyWWHHyyWgggggHMHHHWHHHyyyyyyyyyyyyZyyyy//
+//yyyyyyyyyyyyyyyyyyyyyyyyyyWV"!.?WVVVVVH@HNHmHkyVVXVfWK3:::JfpfWkAXh,`````(yyyyyyyyyyyyyyyyyyH#yyyyyyyyyyyyWHHHHHMHHyyWMggggHNWWHyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyZyyyyyyyZyyyZyyyyyWY' ....~(?4fVVMHNfHmHHHVVWWBC~  :<+HfVVVVVVVh,```.z7TUWWyyyyyyykWWkNHyyyyyyyyyyyyyyyyyyWHkyyWgmgmg@mkMWyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyyWV^  ...~~~(_~~(7WMHffWgHmmHg#=  .(?` ~WVVVyVyyyVVW.. >1:` `?4kyyyyyyHHyyyyyyyyyyyyyyyyyyyyyWHHgmgHHHWyyyyyyyyyyyyyyyyyyyyZyyyyyyy//
+//yyyyyyyyyyyyyyyyyyyf^``.~~~~~~(`(~:~:(jfpffWHgm#  ..!` `` `JyyWY:(?TTT=?!`<<><    .4Wyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//yyyyyyyyyyyyyyyyyW=``` ~~~~~~~< (+:::(<pffpfH#'  ` `` `````,XY:::<<+<::<-.:+>:~  .` -Wyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                      　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　                                    //
+//  ------------------------------------------------------------------梨花ちゃま作成------------------------------------------------------------------  //
+//                                                                                        　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　  //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // ESCキーで強制終了
@@ -128,6 +146,10 @@ WHILE TRUE
 		NEXT
 	ENDIF
 	
+	BTN(LEFT,CLICK,550,568,328)
+	SLEEP(0.5)	
+
+
 	if Auto_login = 1
 		// ◆ログイン自動モード
 		// ランチャー起動まち
