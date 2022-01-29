@@ -3,7 +3,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 [SECTION]
 // ランチャー起動パス
-launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
+launcher_path   = "C:\Program Files (x86)\LINE POD Launcher\pod-client.exe"
+//launcher_path   = "C:\Windows\System32\schtasks.exe /run /tn LINE-POD"
 //launcher_path   = "G:\LINE POD Launcher\pod-client.exe"	
 //launcher_path   = "D:\Program Files (x86)\LINE POD Launcher\pod-client.exe"
 
