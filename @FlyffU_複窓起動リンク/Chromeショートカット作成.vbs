@@ -1,28 +1,33 @@
 Set shell = WScript.CreateObject("WScript.Shell")
 target = ""
 
-For a = 1 To 5
-profile = "Profile " + CStr(a)
-fil = profile + ".lnk"
+Input = InputBox("ì¬‚·‚éƒAƒJƒEƒ“ƒg”‚ð“ü—Í(1`20)","ì¬‚·‚éƒAƒJƒEƒ“ƒg”‚ð“ü—Í:","5")
+if IsNumeric(Input) = 0 or Input <= 0 or Input >= 20 then 
+	MsgBox ("“ü—Í’l‚ª•s³‚Å‚·[" & Input & "]")
+	WScript.Quit
+end if 
 
-'ãƒ•ã‚©ãƒ«ãƒ€ãƒ‘ã‚¹
-strPath = "C:\Program Files (x86)\Google\Chrome\Application\"
+For a = 1 To Input
+	profile = "Flyff_Profile " + CStr(a)
+	fil = profile + ".lnk"
 
-'ãƒ•ã‚¡ã‚¤ãƒ«ã‚·ã‚¹ãƒ†ãƒ ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆä½œæˆ
-Set objFS = CreateObject("Scripting.FileSystemObject")
-If objFS.FolderExists(strPath) Then
-	'ãƒ•ã‚©ãƒ«ãƒ€ãŒå­˜åœ¨ã™ã‚‹å ´åˆã®å‡¦ç†
-	target = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-Else
-	'ãƒ•ã‚©ãƒ«ãƒ€ãŒå­˜åœ¨ã—ãªã„å ´åˆã®å‡¦ç†
-	target = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-End If
+	'ƒtƒHƒ‹ƒ_ƒpƒX
+	strPath = "C:\Program Files (x86)\Google\Chrome\Application\"
 
-Set shortCut = shell.CreateShortcut(fil)
-shortCut.TargetPath = target
-shortCut.Arguments = "--profile-directory="""+ profile + """ ""https://universe.flyff.com/play"""
-shortCut.Save
+	'ƒtƒ@ƒCƒ‹ƒVƒXƒeƒ€ƒIƒuƒWƒFƒNƒgì¬
+	Set objFS = CreateObject("Scripting.FileSystemObject")
+	If objFS.FolderExists(strPath) Then
+		'ƒtƒHƒ‹ƒ_‚ª‘¶Ý‚·‚éê‡‚Ìˆ—
+		target = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+	Else
+		'ƒtƒHƒ‹ƒ_‚ª‘¶Ý‚µ‚È‚¢ê‡‚Ìˆ—
+		target = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+	End If
 
+	Set shortCut = shell.CreateShortcut(fil)
+	shortCut.TargetPath = target
+	shortCut.Arguments = "--profile-directory="""+ profile + """ --app=""https://universe.flyff.com/play"""
+	shortCut.Save
 Next
 
 
